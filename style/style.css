@@ -1,17 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-body{
-    font-family: 'Roboto', 'Arial', Helvetica, sans-serif;
+    font-family: "Roboto";    
+    letter-spacing: 3px;
 }
 
 
 
 a{
     text-decoration: none;
-    transition: 0.3s;;    
+    transition: 0.3s;   
     color: black;
     font-weight: bold;
     font-size: 15pt;
@@ -35,7 +33,9 @@ main{
         background: url("images/bg.jpg") no-repeat center center;
         background-size: cover;
         height: 92vh; 
-
+        display: flex;
+        justify-content: center;
+        
 }
 
 
@@ -47,7 +47,6 @@ main{
 }
 
 .nav-list li{
-    letter-spacing: 3px;
     margin-left: 32px;
 }
 
@@ -64,6 +63,53 @@ main{
 
 }
 
+.nome {
+    display: flex;
+    align-items: center;
+}
+
+.nome a{
+    padding-left: 15px;
+}
+
+
+.meio{   
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 1024px;
+    height: 470px;
+    justify-content: space-around;
+}
+
+.meio h1{
+        font-size: 40pt;
+}
+
+.meio p{
+    font-size: 20pt;
+    padding: 50px;
+    line-height: normal;
+}
+
+.meio button{
+    width: 371px;
+    height: 96px;
+    color: black;
+    font-weight: bold;
+    font-size: 15pt;
+    border:none;
+    cursor: pointer;
+    background-color: rgb(217, 217, 217);
+}
+
+.meio button:hover{
+    color:rgba(0, 0, 0, 0.75);    
+    transition: 0.3s;  
+
+}
 
 /* Todos ID's */
 
@@ -123,3 +169,15 @@ main{
         transform: translateX(0);
     }
 }
+
+.mobile-menu.active .linha1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .linha2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .linha3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
