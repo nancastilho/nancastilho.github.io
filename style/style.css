@@ -1,26 +1,26 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;    
+    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 3px;
 }
 
 
 
-a{
+a {
     text-decoration: none;
-    transition: 0.3s;   
+    transition: 0.3s;
     color: black;
     font-weight: bold;
     font-size: 12pt;
 }
 
-header a:hover{    
+header a:hover {
     opacity: 0.7;
 }
 
 
-nav{
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -29,35 +29,32 @@ nav{
 
 }
 
-main{
-        background: url("images/bg.jpg") no-repeat center center;
-        background-size: cover;
-        height: 92vh; 
-        display: flex;
-        justify-content: center;
-        
+main {
+    background: url("images/bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+
 }
-
-
-
 
 /* todas as Classes */
 
-.nav-list{
+.nav-list {
     list-style: none;
     display: flex;
 }
 
-.nav-list li{
+.nav-list li {
     margin-left: 32px;
 }
 
-.mobile-menu{
-    cursor: pointer; 
-    display: none; 
+.mobile-menu {
+    cursor: pointer;
+    display: none;
 }
 
-.mobile-menu div{
+.mobile-menu div {
     width: 32px;
     height: 2px;
     background: black;
@@ -70,19 +67,20 @@ main{
     align-items: center;
 }
 
-.nome a{
+.nome a {
     padding-left: 15px;
 }
 
-.nome img{
-    width: 100px; /* width of container */
-    height: 100px; /* height of container */
+.nome img {
+    width: 100px;
+    /* width of container */
+    height: 100px;
+    /* height of container */
     border-radius: 50%;
 }
 
 
-
-.meio{   
+.meio {
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -93,63 +91,78 @@ main{
     justify-content: space-around;
 }
 
-.meio h1{
-        font-size: 40pt;
+.meio h1 {
+    font-size: 40pt;
 }
 
-.meio p{
+.meio p {
     font-size: 14pt;
     padding: 50px;
     line-height: 30px;
 }
 
-.meio button{
+
+
+.meio button {
     width: 371px;
     height: 96px;
     color: black;
     font-weight: bold;
     font-size: 15pt;
-    border:none;
+    border: none;
     cursor: pointer;
     background-color: rgb(217, 217, 217);
+    border-radius: 5%;
 }
 
-.meio button:hover{
-    color:rgba(0, 0, 0, 0.75);    
-    transition: 0.3s;  
+.meio button:hover {
+    color: rgba(0, 0, 0, 0.75);
+    transition: 0.3s;
 
 }
 
-.sidebar{
+.about {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    width: 1024px;
+    height: 500px;
+    justify-content: space-around;
+}
+
+.sidebar {
     position: fixed;
     z-index: 1;
     bottom: 10px;
     right: 0px;
     width: 300px;
     height: 80px;
-    align-items: center;   
-    background: none; 
+    align-items: center;
+    background: none;
 }
 
-.sidebar img{
+.sidebar img {
     display: flex;
     width: 60px;
-    height: 60px;   
-   
+    height: 60px;
+
 }
 
-.sidebar img:hover{
-    opacity: 0.7;   
+.sidebar img:hover {
+    opacity: 0.7;
     transition: 0.3s;
 }
+
 /* Todos ID's */
 
-#whatsapp{
+#whatsapp {
     width: 49px;
-    height: 49px; 
+    height: 49px;
 }
 
-#whatsappColo{
+#whatsappColo {
     position: fixed;
     z-index: 1;
     bottom: 20px;
@@ -158,10 +171,11 @@ main{
     transition: 0.3s;
 }
 
-#whatsappColo:hover{
+#whatsappColo:hover {
     opacity: 100%;
 }
-#linkedinColo{
+
+#linkedinColo {
     position: fixed;
     z-index: 1;
     bottom: 20px;
@@ -170,20 +184,83 @@ main{
     transition: 0.3s;
 }
 
-#linkedinColo:hover{
+#linkedinColo:hover {
     opacity: 100%;
+}
+
+#curiosidade {
+    font-weight: bold;
+}
+
+#contato {
+    cursor: pointer;
 }
 
 
 
+/* The Modal (background) */
+.modal {
+    display: none; /*Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 30px;
+    /* Location of the box */
+    width: 50%;
+    /* Full width */
+    
+}
 
-@media (max-width: 999px){
-   
-    body{
+/* Modal Content */
+.modal-content {
+    background: rgb(255, 255, 255);
+    border: 1px solid #888;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5%;
+}
+
+.modal-content img {
+    width: 150px;
+    margin: auto;
+
+}
+
+.modal-content img:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 999px) {
+
+    body {
         overflow: hidden;
     }
 
-    .nav-list{
+    .nav-list {
         position: absolute;
         top: 120px;
         right: 0;
@@ -192,43 +269,44 @@ main{
         background: rgb(217, 217, 217);
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;   
+        justify-content: space-around;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
-    }    
+    }
 
     .nav-list.active {
         transform: translateX(0);
     }
 
-    .nav-list li{
+    .nav-list li {
         margin-left: 0;
         opacity: 0;
     }
 
 
-   .mobile-menu {
+    .mobile-menu {
 
-    display: block;
-   }
+        display: block;
+    }
 
-   .sidebar{
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;    
-}
+    .sidebar {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
 
-    .sidebar.active{
+    .sidebar.active {
         transform: translateX(0%);
     }
 
 }
 
 @keyframes navLinkFade {
-    from{
+    from {
         opacity: 0;
         transform: translateX(50px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateX(0);
     }
@@ -236,12 +314,12 @@ main{
 
 .mobile-menu.active .linha1 {
     transform: rotate(-45deg) translate(-8px, 8px);
-  }
-  
-  .mobile-menu.active .linha2 {
+}
+
+.mobile-menu.active .linha2 {
     opacity: 0;
-  }
-  
-  .mobile-menu.active .linha3 {
+}
+
+.mobile-menu.active .linha3 {
     transform: rotate(45deg) translate(-5px, -7px);
-  }
+}
