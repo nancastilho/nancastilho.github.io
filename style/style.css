@@ -15,9 +15,7 @@ a {
     font-size: 12pt;
 }
 
-header a:hover {
-    opacity: 0.7;
-}
+
 
 
 nav {
@@ -45,22 +43,14 @@ main {
     display: flex;
 }
 
+.nav-list a:hover{
+    opacity: 0.7;
+}
+
 .nav-list li {
     margin-left: 32px;
 }
 
-.mobile-menu {
-    cursor: pointer;
-    display: none;
-}
-
-.mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: black;
-    margin: 8px;
-
-}
 
 .nome {
     display: flex;
@@ -71,6 +61,10 @@ main {
     padding-left: 15px;
 }
 
+.nome a:hover{
+    opacity: 0.7;
+}
+
 .nome img {
     width: 100px;
     /* width of container */
@@ -78,7 +72,6 @@ main {
     /* height of container */
     border-radius: 50%;
 }
-
 
 .meio {
     margin: auto;
@@ -116,7 +109,7 @@ main {
 }
 
 .meio button:hover {
-    color: rgba(0, 0, 0, 0.75);
+    opacity: 0.7;
     transition: 0.3s;
 
 }
@@ -142,19 +135,19 @@ main {
     height: 80px;
     align-items: center;
     background: none;
+    display: flex;
+    justify-content: space-around;
+
 }
+
+
 
 .sidebar img {
-    display: flex;
     width: 60px;
     height: 60px;
-
 }
 
-.sidebar img:hover {
-    opacity: 0.7;
-    transition: 0.3s;
-}
+
 
 /* Todos ID's */
 
@@ -166,27 +159,33 @@ main {
 #whatsappColo {
     position: fixed;
     z-index: 1;
-    bottom: 20px;
+    bottom: 22px;
     right: 60px;
-    opacity: 0;
+    opacity: 0%;
     transition: 0.3s;
 }
 
 #whatsappColo:hover {
+
     opacity: 100%;
 }
 
 #linkedinColo {
     position: fixed;
     z-index: 1;
-    bottom: 20px;
+    bottom: 22px;
     right: 227px;
-    opacity: 0;
+    opacity: 0%;
     transition: 0.3s;
 }
 
 #linkedinColo:hover {
     opacity: 100%;
+}
+
+
+#github:hover{
+    opacity: 0.7;
 }
 
 #curiosidade {
@@ -325,72 +324,74 @@ main {
 }
 
 
-@media (max-width: 999px) {
+@media (max-width: 683px) {
 
-    body {
-        overflow: hidden;
-    }
-
-    .nav-list {
-        position: absolute;
-        top: 120px;
-        right: 0;
-        width: 50vw;
-        height: 92vh;
-        background: rgb(217, 217, 217);
+    
+    nav{
+        height: 300px;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
     }
 
-    .nav-list.active {
-        transform: translateX(0);
+    .nome{
+        flex-direction: column;
+    }
+
+    .nome img{
+        padding: 5px;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-content: center;
     }
 
     .nav-list li {
-        margin-left: 0;
-        opacity: 0;
+        margin: auto;
+        padding: 5px;
+    }
+
+    .sidebar{
+        position: initial;
+        justify-content: center;
+        height: auto;
+        padding-right: 4px;
+
+    }
+
+    .sidebar img{
+        height: 50px;
+        width: 50px;
+    }
+
+    #whatsapp{
+        padding-left: 5px;
+        height: 40px;
+        width: 40px;
     }
 
 
-    .mobile-menu {
+    .teste {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: auto;
 
-        display: block;
     }
 
-    .sidebar {
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
+    .square {
+        width: 300px;
+        height: 430px;
+        background: white;
+        border-radius: 4px;
+        box-shadow: 0px 20px 50px #D9DBDF;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
     }
 
-    .sidebar.active {
-        transform: translateX(0%);
-    }
+    
 
 }
 
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
-.mobile-menu.active .linha1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .linha2 {
-    opacity: 0;
-}
-
-.mobile-menu.active .linha3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-}
