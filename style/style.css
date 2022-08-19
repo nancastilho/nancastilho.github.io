@@ -11,7 +11,7 @@ a {
     text-decoration: none;
     transition: 0.3s;
     color: black;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 12pt;
 }
 
@@ -41,6 +41,7 @@ main {
 .nav-list {
     list-style: none;
     display: flex;
+    
 }
 
 .nav-list a:hover{
@@ -77,7 +78,6 @@ main {
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     width: 1024px;
     height: 470px;
@@ -123,6 +123,9 @@ main {
     width: 1024px;
     height: 500px;
     justify-content: space-around;
+}
+
+.about p{
     font-weight: bold;
 }
 
@@ -199,7 +202,7 @@ main {
 
 /* Cards */
 
-.teste {
+.container_card {
     display: flex;
     margin: auto;
 
@@ -232,10 +235,13 @@ main {
 
 .mask {
     border-radius: 4px;
+    /* object-fit: cover;
+    object-position:0px -80px ;  */
 }
 
 .square img {
     width: 300px;
+    /* height: 200px; */
 }
 
 .h1 {
@@ -277,7 +283,7 @@ main {
 
 .modal {
 
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 1;
     padding-top: 30px;
@@ -300,8 +306,7 @@ main {
 
 .modal-content img {
     width: 150px;
-    margin: auto;
-
+    height: 30px;
 }
 
 .modal-content img:hover {
@@ -326,28 +331,35 @@ main {
 
 @media (max-width: 683px) {
 
-    
+    /* navbar */
     nav{
         height: 300px;
         flex-direction: column;
+        
     }
 
     .nome{
         flex-direction: column;
+        border-bottom: 1px inset rgb(0, 0, 0);
     }
 
     .nome img{
         padding: 5px;
+        margin-right: 13px;
     }
 
     .nav-list{
         flex-direction: column;
         align-content: center;
+        
+        
     }
 
     .nav-list li {
         margin: auto;
         padding: 5px;
+        border-bottom: 1px inset rgb(0, 0, 0);
+      
     }
 
     .sidebar{
@@ -369,27 +381,67 @@ main {
         width: 40px;
     }
 
+    /* fim_navbar */
 
-    .teste {
+
+    .meio{
+        
+        margin-top: 130px;
+    }
+
+    .meio h1{
+        font-size: 30pt;
+        
+    }
+
+    .meio p{
+        margin-bottom: 10px;
+    }
+
+    .container_card {
         display: flex;
         justify-content: space-around;
         flex-direction: column;
-        margin: auto;
 
     }
 
     .square {
-        width: 300px;
-        height: 430px;
-        background: white;
-        border-radius: 4px;
-        box-shadow: 0px 20px 50px #D9DBDF;
-        -webkit-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease;
+        
+        height: 330px;
+      
+       
     }
 
-    
+    .square img{
+        height: 200px; 
+    }
+
+    .mask {
+        
+        object-fit: cover;
+    }
+
+
+    .about{
+        padding: 20px;
+        height: auto;
+        
+    }
+
+    .about h1{
+        font-size: 20pt;
+    }
+
+    .about p{
+        font-weight: 100;
+    }
+
+    .modal-content{
+        width: auto;
+        height: auto;
+    }
+
+   
 
 }
 
