@@ -125,6 +125,10 @@ main {
     justify-content: space-around;
 }
 
+.about h1{
+    text-align: center;
+}
+
 .about p{
     font-weight: bold;
 }
