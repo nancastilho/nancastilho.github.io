@@ -283,7 +283,7 @@ main {
 
 .modal {
 
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 1;
     padding-top: 30px;
@@ -306,7 +306,7 @@ main {
 
 .modal-content img {
     width: 150px;
-    height: 30px;
+    
 }
 
 .modal-content img:hover {
